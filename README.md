@@ -6,6 +6,9 @@
 cd /path/to/Download/Folder
 adb install com.tencent.tmgp.sgame_3.81.1.8_381010801.apk
 ```
+* login
+    *  [Wechat](http://weixin.qq.com/)(Optional)
+
 
 * get process id
 ```
@@ -42,6 +45,6 @@ adb shell ps -T
 
 ### simpleperf
 ```
-adb shell simpleperf stat -p [pid] --duration [second]
-adb shell simpleperf stat -t [tid] --duration [second]
+adb shell simpleperf stat --use-devfreq-counters -p [pid] --duration [second]
+adb shell simpleperf stat --use-devfreq-counters -t [tid] --duration [second]
 ```
