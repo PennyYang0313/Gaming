@@ -7,7 +7,11 @@ cd /path/to/Download/Folder
 adb install com.tencent.tmgp.sgame_3.81.1.8_381010801.apk
 ```
 * login
-    *  [Wechat](http://weixin.qq.com/)(Optional)
+    *  [Wechat](http://weixin.qq.com/)
+   ```
+   cd /path/to/Download/Folder
+   adb install weixin8028android2240_arm64.apk
+   ```
 
 
 * get process id
