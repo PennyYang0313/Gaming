@@ -14,7 +14,7 @@ adb shell pidof com.tencent.tmgp.sgame
 
 * taskset
 ```
-taskset -p [mask] [pid]
+adb shell taskset -p [mask] [pid]
 ```
 * 調整上下限頻率
 ```
@@ -33,6 +33,11 @@ adb shell "echo [freq] > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_fre
 adb shell "echo [freq] > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"
 adb shell "chmod 440 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq"
 adb shell "chmod 440 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"
+```
+
+* Process status
+```
+adb shell ps -T
 ```
 
 ### simpleperf
