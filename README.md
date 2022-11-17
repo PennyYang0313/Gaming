@@ -13,11 +13,16 @@ adb install com.tencent.tmgp.sgame_3.81.1.8_381010801.apk
    adb install weixin8028android2240_arm64.apk
    ```
 
-
 * get process id
 ```
 adb shell pidof com.tencent.tmgp.sgame
 ```
+
+* Process status
+```
+adb shell ps -T (get all thread info)
+```
+
 
 * taskset
 ```
@@ -42,10 +47,6 @@ adb shell "chmod 440 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq"
 adb shell "chmod 440 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"
 ```
 
-* Process status
-```
-adb shell ps -T
-```
 
 ### simpleperf
 ```
