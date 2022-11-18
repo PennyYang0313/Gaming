@@ -23,7 +23,10 @@ adb shell pidof com.tencent.tmgp.sgame
 adb shell ps -T (get all thread info)
 ```
 
-
+* get package name
+```
+adb shell pm list packages -f
+```
 * taskset
 ```
 adb shell taskset -p [mask] [pid]
@@ -53,3 +56,8 @@ adb shell "chmod 440 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"
 adb shell simpleperf stat --use-devfreq-counters -p [pid] --duration [second]
 adb shell simpleperf stat --use-devfreq-counters -t [tid] --duration [second]
 ```
+adb shell simpleperf stat --use-devfreq-counters -t 4270 --duration 10
+
+### systrace
+* python 2.7
+
