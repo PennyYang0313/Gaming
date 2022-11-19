@@ -23,6 +23,7 @@ adb install "Garena 傳說對決：六週年版本_1.47.1.1_Apkpure.apk"
       cd /path/to/Download/Folder
       adb install Facebook_393.0.0.34.106_Apkpure.apk
       ```
+### get info
 * get process id
 ```
 adb shell pidof com.tencent.tmgp.sgame
@@ -38,6 +39,8 @@ adb shell ps -T (get all thread info)
 ```
 adb shell pm list packages -f
 ```
+
+### control
 * taskset
 ```
 (only process)       adb shell taskset -p [mask] [pid]
