@@ -96,3 +96,9 @@ python systrace.py -t [time]
   ```
   python3 record_android_trace -o trace_file.perfetto-trace -t 10s -b 32mb \ sched freq idle am wm gfx view binder_driver hal dalvik camera input res memory 
   ```
+* ADB Shell
+```
+adb push perfetto_config.pbtx data/misc/perfetto-traces/
+adb shell perfetto --txt -c data/misc/perfetto-traces/perfetto_config.pbtx -o data/misc/perfetto-traces/trace_file.perfetto-trace
+adb pull /data/misc/perfetto-traces/trace_file.perfetto-trace
+```
