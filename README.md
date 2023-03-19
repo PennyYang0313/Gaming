@@ -87,4 +87,12 @@ python systrace.py -t [time]
 ### [perfetto](https://developer.android.com/studio/command-line/perfetto) 
 * [UI](https://ui.perfetto.dev/)
 
-
+* record_android_trace (for windows)
+  * 下載
+  ```
+  curl -O https://raw.githubusercontent.com/google/perfetto/master/tools/record_android_trace
+  ```
+  * 執行
+  ```
+  python3 record_android_trace -o trace_file.perfetto-trace -t 10s -b 32mb \ sched freq idle am wm gfx view binder_driver hal dalvik camera input res memory 
+  ```
