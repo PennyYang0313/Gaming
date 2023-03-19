@@ -83,6 +83,8 @@ adb shell simpleperf stat --use-devfreq-counters -t [tid] --duration [second]
 cd /path/to/systrace/folder/
 python systrace.py -t [time] 
 ```
+* open file
+chrome://tracing/
 
 ### [perfetto](https://developer.android.com/studio/command-line/perfetto) 
 * [UI](https://ui.perfetto.dev/)
@@ -101,4 +103,9 @@ python systrace.py -t [time]
 adb push perfetto_config.pbtx data/misc/perfetto-traces/
 adb shell perfetto --txt -c data/misc/perfetto-traces/perfetto_config.pbtx -o data/misc/perfetto-traces/trace_file.perfetto-trace
 adb pull /data/misc/perfetto-traces/trace_file.perfetto-trace
+```
+
+* Converting (ubuntu)
+```
+./traceconv systrace [input proto file] [output systrace file]
 ```
